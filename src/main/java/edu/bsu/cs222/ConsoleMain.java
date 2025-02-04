@@ -10,8 +10,8 @@ public class ConsoleMain {
         WikiURL urlConnector = new WikiURL();
         URLConnection connection = urlConnector.WikiURLConnection(userInput);
         String jsonData = new DataGetter().WikiDataGetter(connection);
-        parser
-        RevisionGetter().revisionParse(jsonData);
+        RevisionGetter parser = new RevisionGetter();
+        parser.revisionParse(jsonData);
 
     }
 }
