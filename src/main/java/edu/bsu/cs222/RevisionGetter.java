@@ -4,16 +4,14 @@ import org.json.JSONArray;
 import org.json.JSONObject;
 public class RevisionGetter {
     public String revisionParse(String jsonData){
-
-        //JSONObject object = new JSONObject(jsonData);
-        //JSONObject revisions = object.getJSONObject("revisions");
-
         JSONArray revisionArray = new JSONArray();
 
         return revisionArray.toString();
 
     }
-    public JSONArray ArrayMaker(String jsonData){
+    public String ArrayMaker(JSONObject jsonData){
+        return  (jsonData.getJSONObject("$..revisions").toString());
+
 
     }
 }
