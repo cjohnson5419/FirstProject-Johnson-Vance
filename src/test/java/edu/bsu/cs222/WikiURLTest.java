@@ -5,7 +5,7 @@ import org.junit.jupiter.api.Test;
 
 import java.io.IOException;
 import java.io.InputStream;
-import java.net.URLConnection;
+
 import java.nio.charset.Charset;
 import java.util.Objects;
 

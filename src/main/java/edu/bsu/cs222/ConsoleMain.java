@@ -7,7 +7,7 @@ public class ConsoleMain {
     public static void main(String[] args) throws IOException {
         Scanner scan = new Scanner(System.in);
         Errors errorChecker = new Errors();
-        WikiURL urlConnector = new WikiURL();
+
 
         DataGetter dataGetter = new DataGetter();
 
@@ -15,8 +15,8 @@ public class ConsoleMain {
         String userInput = scan.nextLine().toLowerCase();
         errorChecker.checkEmptyInput(userInput);
 
-        URLConnection connection = urlConnector.wikiURLConnection(userInput);
-        String jsonData = dataGetter.WikiDataGetter(connection);
+        URLConnection connection = WikiURL.wikiURLConnection(userInput);
+        String jsonData = dataGetter.wikiDataGetter(connection);
 
         RevisionGetter revisionsPrinter = new RevisionGetter(jsonData);
         revisionsPrinter.createAndFormatArray();
